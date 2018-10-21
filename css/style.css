@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+*{font-family: 'Merienda One', cursive;}
+body{background:black; }
+
+/*#btn{position:fixed; width:200px; height:70px; top:100px; left:200px;}*/
+
+#top_btn{position:fixed; width:40px; height:40px; border-radius:20px; z-index:100; bottom:50px; right:10%; transition:0.5s; cursor:pointer; opacity:0;}
+#top_btn:hover{background:#ffce07;}
+#top_btn>a>img{position:absolute; left:-10px; top:-15px;}
+#top_btn>p{position:absolute; top:40px; left:7px; color:#fff; font-size:10pt; text-transform:uppercase;}
+/* ------------------top_btn----------------- */
+
+#header_wrap{position:relative; width:520px; margin:35vh auto; _background:red; height:200px;}
+	div.hello_e{width:250px; left:5px; height:133px; position:absolute; _background:brown; opacity:0;}
+		h1{position:absolute; color:white; font-size:100px;}
+		#hello>span{color:black;}
+		#e{left:77px; transition:all 0.7s steps(5,start) 0.7s;
+			-webkit-transform-origin: 50% 58%;
+			-ms-transform-origin: 50% 58%;
+			-moz-transform-origin: 50% 58%;
+			-o-transform-origin: 50% 58%;
+			transform-origin: 50% 58%;}
+		#e.on{transform: rotate(-180deg); color:white;}
+	div.ween{width:250px; right:0; height:133px; position:absolute; _background:yellow; opacity:0;}
+		h1#ween{color:white;}
+	div.bloods{position:absolute; width:426px; height:294px; top:104px; left:17px; z-index:-1; _background:blue; overflow:hidden;}
+	div.bloods>div{float:left;}
+		.drop01{margin-top:-187px}
+		.drop02{margin-left:55px; margin-top:-51px}
+		.drop03{margin-left:80px; margin-top:-203px}
+		.drop04{margin-left:33px; margin-top:-294px;}
+		.drop05{margin-left:12px; margin-top:-50px;}
+		.drop06{margin-left:24px; margin-top:-197px;}
+		.drop07{margin-left:19px; margin-top:-165px;}
+/* ------------------header_css----------------- */
+
+.main_section{position:absolute; background:#21385f; width:100%; height:2300px; margin-top:100px; opacity:0; z-index:-3; top:0;}
+	div.bets{position:relative; width:130px; height: 120px; top:20%; left:70%; _background:red;}
+	div.bets>div>img{width:100%;}
+		div.bet01{position:absolute; width:82px;}
+		div.bet02{position:absolute; top:30px; left:80px; width:41px;}
+		div.bet03{position:absolute; top:50px; left:30px; width:70px;}
+		
+	#contents_wrap{width:100%; height:1000px; _background:red; position:absolute; bottom:0; z-index:-2;}
+
+	.hand{position:absolute; top:300px; left:350px; z-index: 100; transform:rotate(10deg); transform-origin: bottom center;}
+	.hand.active{animation: shake 3s infinite;}
+	
+	@keyframes shake {
+		0% {transform:rotate(10deg);}		
+		50% {transform:rotate(30deg);}		
+		100% {transform:rotate(10deg);}
+	}
+
+
+#bg01{position:absolute; bottom:-100px; width:100%;}
+	#bg01>img{width:100%;}
+#bg02{position:absolute; bottom:40px; width:100%; z-index:-1}
+	#bg02>img{width:100%;}
+
+/* ------------------contents_background_css- 위치값수정필요 ---------------- */
