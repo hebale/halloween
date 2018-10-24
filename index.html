@@ -16,15 +16,23 @@
 			init();
 			scrollFunc();
 			topBtn();
+			boneHand();
+			dDayCounter();
+			pumpkinLight();
+			lightning();
 		});
 	</script>	
 </head>
 <body>
-	<!-- <button id="btn">이벤트 테스트</button> -->
+	<button id="btn" onclick="lightning()">이벤트 테스트</button>
 	<div id="top_btn">
-		<a href="#"><img src="./images/pumpkin.png" alt="pumpkin"></a>
-		<p>top</p>
+		<a href="#"><img src="./images/pumpkin.png" alt="pumpkin">TOP</a>
+		<div></div>
 	</div>
+	<div id="mouse_wheel">
+		<img src="./images/boneHand.gif" alt="boneHand">
+	</div>
+
 	<header id="header_wrap">
 		<div class="hello_e">
 			<h1 id="hello">H<span>e</span>llo</h1>
@@ -42,27 +50,94 @@
 			<div class="drop06"><img src="./images/blood06.png" alt="drop06"></div>
 			<div class="drop07"><img src="./images/blood07.png" alt="drop07"></div>
 		</div>
-	</header>
-	
-	<section class="main_section">
-		<div id="contents_wrap">
-			<div class="bets">
-				<div class="bet01"><img src="./images/bet.gif" alt="bet01"></div>
-				<div class="bet02"><img src="./images/bet.gif" alt="bet02"></div>
-				<div class="bet03"><img src="./images/bet.gif" alt="bet03"></div>
-			</div>
-		</div>
+	</header>	
+	<section class="top_section">
+		<div class="counter">
+			<div id="date"></div>
+			<div id="timer"></div>
+		</div>		
 		<div class="bg_wrap">
-			<div id="bg01">
+			<div id="bg01">		<!------- front bg_images ------->
 				<img src="./images/bg_front.png" alt="bg_front">
 				<div class="hand">
 					<img src="./images/hand.png" alt="hand">
 				</div>
+				<div class="pumpkin_fixed">
+					<img src="./images/pumpkin_fixed.png" alt="pumpkin_fixed">
+					<div></div>
+				</div>
 			</div>
-			<div id="bg02">
+			<div id="bg02">		<!------- back bg_images ------->
 				<img src="./images/bg_back.png" alt="bg_back">
+				<div class="bet01">
+					<img src="./images/bet01.gif" alt="bet01">
+				</div>
+				<div class="bet02">
+					<img src="./images/bet02.gif" alt="bet02">
+				</div>
+				<div class="bet03">
+					<img src="./images/bet03.gif" alt="bet03">
+				</div>
+				<div class="ghost">
+					<img src="./images/ghost.gif" alt="ghost">
+				</div>
 			</div>
 		</div>
+		<div id="lightning">lightning_effect</div>
+	</section>
+	<section class="mid_section">
+		추가될 이미지<br>
+		skeleton & vempire $ zombie_parts $ dino_bones & gold_chest $ trash
+	</section>
+	<section class="bot_section">
+		<ul id="nav">
+			<li><a href="#">halloween is</a></li>
+			<li>
+				<a href="#">line-up</a>
+				<ul class="line_up">
+					<li><a href="#">skeleton</a></li>
+					<li><a href="#">dracula</a></li>
+					<li><a href="#">ghost</a></li>
+					<li><a href="#">zombie</a></li>
+					<li><a href="#">pumpkin</a></li>
+					<li><a href="#">witch</a></li>
+					<li><a href="#">wolfman</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div id="halloween_is">
+			<img src="#" alt="halloweenIs">
+		</div>
+		<ul monster_line_up>
+			<li>
+				<img src="#" alt="skeleton">
+				<div>Lorem ipsum dolor sit amet.</div>
+			</li>
+			<li>
+				<img src="#" alt="dracula">
+				<div>Quibusdam illum iusto modi libero.</div>
+			</li>
+			<li>
+				<img src="#" alt="ghost">
+				<div>Molestiae est, saepe officiis. Magni.</div>
+			</li>
+			<li>
+				<img src="#" alt="zombie">
+				<div>Libero, explicabo. Amet, quia, facilis?</div>
+			</li>
+			<li>
+				<img src="#" alt="pumpkin">
+				<div>Tempora, quam et velit molestiae.</div>
+			</li>
+			<li>
+				<img src="#" alt="witch">
+				<div>Quisquam rem placeat repellendus nemo?</div>
+			</li>
+			<li>
+				<img src="#" alt="wolfman">
+				<div>Dolorum corporis eum nihil, mollitia.</div>
+			</li>
+		</ul>
 	</section>
 </body>
 </html>
