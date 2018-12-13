@@ -10,46 +10,35 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="./js/jquery.easing.min.js"></script>
 	<script src="./js/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Caveat:700|Kaushan+Script|Merienda+One|Reenie+Beanie" rel="stylesheet">
-	<script>
-		$(function(){
-			scrollFunc();
-			init();
-			gogo();
-			topBtn();
-			boneHand();
-			dDayCounter();
-			pumpkinLight();
-		});
-	</script>	
+	<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Walter+Turncoat" rel="stylesheet">
 </head>
 <body>
 	<button id="btn" onclick="lightning()">이벤트 테스트</button>
-	<div id="top_btn">
-		<a href="#"><img src="./images/pumpkin.png" alt="pumpkin">TOP</a>
-		<div></div>
-	</div>
 	<div id="mouse_wheel">
 		<img src="./images/boneHand.gif" alt="boneHand">
 	</div>
 
+
+
 	<header id="header_wrap">
-		<div class="hello_e">
-			<h1 id="hello">H<span>e</span>llo</h1>
-			<h1 id="e">e</h1>
-		</div>
-		<div class="ween">
-			<h1 id="ween">ween</h1>
-		</div>
-		<div class="bloods">
-			<div class="drop01"><img src="./images/blood01.png" alt="drop01"></div>
-			<div class="drop02"><img src="./images/blood02.png" alt="drop02"></div>
-			<div class="drop03"><img src="./images/blood03.png" alt="drop03"></div>
-			<div class="drop04"><img src="./images/blood04.png" alt="drop04"></div>
-			<div class="drop05"><img src="./images/blood05.png" alt="drop05"></div>
-			<div class="drop06"><img src="./images/blood06.png" alt="drop06"></div>
-			<div class="drop07"><img src="./images/blood07.png" alt="drop07"></div>
-		</div>
+		<article>
+			<div class="hello_e">
+				<h1 id="hello">H<span>e</span>llo</h1>
+				<h1 id="e">e</h1>
+			</div>
+			<div class="ween">
+				<h1 id="ween">ween</h1>
+			</div>
+			<div class="bloods">
+				<div class="drop01"><img src="./images/blood01.png" alt="drop01"></div>
+				<div class="drop02"><img src="./images/blood02.png" alt="drop02"></div>
+				<div class="drop03"><img src="./images/blood03.png" alt="drop03"></div>
+				<div class="drop04"><img src="./images/blood04.png" alt="drop04"></div>
+				<div class="drop05"><img src="./images/blood05.png" alt="drop05"></div>
+				<div class="drop06"><img src="./images/blood06.png" alt="drop06"></div>
+				<div class="drop07"><img src="./images/blood07.png" alt="drop07"></div>
+			</div>
+		</article>
 	</header>	
 	<section class="top_section">
 		<div class="counter">
@@ -57,32 +46,38 @@
 			<div id="timer"></div>
 		</div>		
 		<div class="bg_wrap">
+
 			<div class="witch">
 				<img src="./images/witch.gif" alt="witch">
 			</div>
-			<div id="bg01">		<!------- front bg_images ------->
-				<img src="./images/bg_front.png" alt="bg_front">
-				<div class="hand">
-					<img src="./images/hand.png" alt="hand">
+
+			<div id="bg_images">		<!------- front bg_images ------->
+				<div class="bg_front">
+					<div class="hand">
+						<img src="./images/hand.png" alt="hand">
+					</div>
+					<div class="hand02">
+						<img src="./images/hand02.png" alt="hand02">
+					</div>
+					<div class="pumpkin_fixed">
+						<img src="./images/pumpkin_fixed.png" alt="pumpkin_fixed">
+						<div></div>
+					</div>
 				</div>
-				<div class="pumpkin_fixed">
-					<img src="./images/pumpkin_fixed.png" alt="pumpkin_fixed">
-					<div></div>
-				</div>
-			</div>
-			<div id="bg02">		<!------- back bg_images ------->
-				<img src="./images/bg_back.png" alt="bg_back">
-				<div class="bet01">
-					<img src="./images/bet01.gif" alt="bet01">
-				</div>
-				<div class="bet02">
-					<img src="./images/bet02.gif" alt="bet02">
-				</div>
-				<div class="bet03">
-					<img src="./images/bet03.gif" alt="bet03">
-				</div>
-				<div class="ghost">
-					<img src="./images/ghost.gif" alt="ghost">
+			<!------- back bg_images ------->
+				<div class="bg_back">
+					<div class="bet01">
+						<img src="./images/bet01.gif" alt="bet01">
+					</div>
+					<div class="bet02">
+						<img src="./images/bet02.gif" alt="bet02">
+					</div>
+					<div class="bet03">
+						<img src="./images/bet03.gif" alt="bet03">
+					</div>
+					<div class="ghost">
+						<img src="./images/ghost.gif" alt="ghost">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -93,54 +88,65 @@
 		skeleton & vempire $ zombie_parts $ dino_bones & gold_chest $ trash
 	</section>
 	<section class="bot_section">
-		<ul id="nav">
-			<li><a href="#">halloween is</a></li>
-			<li>
-				<a href="#">line-up</a>
-				<ul class="line_up">
-					<li><a href="#">skeleton</a></li>
-					<li><a href="#">dracula</a></li>
-					<li><a href="#">ghost</a></li>
-					<li><a href="#">zombie</a></li>
-					<li><a href="#">pumpkin</a></li>
-					<li><a href="#">witch</a></li>
-					<li><a href="#">wolfman</a></li>
-				</ul>
-			</li>
-		</ul>
-		<div id="halloween_is">
-			<img src="#" alt="halloweenIs">
+		<div class="bat_eyes">
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
-		<ul monster_line_up>
-			<li>
-				<img src="#" alt="skeleton">
-				<div>Lorem ipsum dolor sit amet.</div>
-			</li>
-			<li>
-				<img src="#" alt="dracula">
-				<div>Quibusdam illum iusto modi libero.</div>
-			</li>
-			<li>
-				<img src="#" alt="ghost">
-				<div>Molestiae est, saepe officiis. Magni.</div>
-			</li>
-			<li>
-				<img src="#" alt="zombie">
-				<div>Libero, explicabo. Amet, quia, facilis?</div>
-			</li>
-			<li>
-				<img src="#" alt="pumpkin">
-				<div>Tempora, quam et velit molestiae.</div>
-			</li>
-			<li>
-				<img src="#" alt="witch">
-				<div>Quisquam rem placeat repellendus nemo?</div>
-			</li>
-			<li>
-				<img src="#" alt="wolfman">
-				<div>Dolorum corporis eum nihil, mollitia.</div>
-			</li>
-		</ul>
+		<div class="bg_cave01">			
+			<div id="top_btn">
+				<a href="#"><img src="./images/spider.png" alt="spider"></a>
+				<div></div>
+			</div>
+			<div id="gnb">
+				<ul id="nav">
+					<li class="on"><a href="javascript:void(0)">halloween is</a></li>
+					<li><a href="javascript:void(0)">line-up</a></li>
+				</ul>
+				<div class="navigator">
+					<img src="./images/navi_mask.png" alt="navi_mask">
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="halloween_is">
+			<img src="#" alt="halloweenIs">
+			<p>핼러윈(Halloween)은 매년 10월 31일, 그리스도교 축일인 만성절(萬聖節) 전날 미국 전역에서 다양한 복장을 갖춰 입고 벌이는 축제다. 본래 핼러윈은 켈트인의 전통 축제 ‘사윈’(Samhain)에서 기원한 것으로 알려져 있다. 켈트 족은 한 해의 마지막 날이 되면 음식을 마련해 죽음의 신에게 제의를 올림으로써 죽은 이들의 혼을 달래고 악령을 쫓았다. 이때 악령들이 해를 끼칠까 두려워한 사람들이 자신을 같은 악령으로 착각하도록 기괴한 모습으로 꾸미는 풍습이 있었는데, 이것이 핼러윈 분장 문화의 원형이 됐다.</p>
+		</div>
+
+		<div class="line_up">
+			<div>
+				<div class="btnL"></div>
+				<div class="btnR"></div>
+				<ul>
+					<li>
+						<img src="#" alt="skeleton">
+					</li>
+					<li class="on">
+						<img src="#" alt="vempire">
+					</li>
+					<li>
+						<img src="#" alt="ghost">
+					</li>
+					<li>
+						<img src="#" alt="zombie">
+					</li>
+					<li>
+						<img src="#" alt="witch">
+					</li>					
+					<li>
+						<img src="#" alt="wolfman">
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div>
+					<p>skeleton</p>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</div>
+		</div>
 	</section>
 </body>
 </html>
