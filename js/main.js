@@ -15,8 +15,9 @@ $(function(){
 	dDayCounter();
 	pumpkinLight();
 
-	console.log(winH);
-	console.log($(document).height());
+	//console.log(winH);
+	//console.log($(document).height());
+
 	$(window).resize(function(){
 		winW = $(window).width();
 		winH = $(window).height();
@@ -49,14 +50,17 @@ $(function(){
 	$(document).on("click",'.next',function(){
 		var ulPos = $("div.line_up>div:nth-of-type(1)>ul");
 		var firstLi = ulPos.find("li").eq(0).html();
-		
+		var name = $(this).find("img").attr("alt");
+		$(".line_up>div:nth-of-type(2)>div").css("display","none");
+		$(".line_up>div:nth-of-type(2)").find("."+name).css("display","block");
+
 		ulPos.find("li").removeClass();
 		$(this).addClass("on");
 		
-		ulPos.stop().animate({left: - 205},function(){
+		ulPos.stop().animate({left: -480},function(){
 			ulPos.append("<li>" + firstLi +"</li>");
 			ulPos.find("li").eq(0).remove();
-			ulPos.css("left",0);
+			ulPos.css("left",-240);
 
 			findOn();
 		});		
@@ -65,17 +69,38 @@ $(function(){
 	$(document).on("click",'.prev',function(){
 		var ulPos = $("div.line_up>div:nth-of-type(1)>ul");
 		var lastLi = ulPos.find("li").eq(ulPos.find("li").length - 1).html();
+		var name = $(this).find("img").attr("alt");
+		$(".line_up>div:nth-of-type(2)>div").css("display","none");
+		$(".line_up>div:nth-of-type(2)").find("."+name).css("display","block");
 		
+
 		ulPos.find("li").removeClass();
 		$(this).addClass("on");
 
-		ulPos.stop().animate({left: 205},function(){
+		ulPos.stop().animate({left: 0},function(){
 			ulPos.prepend("<li>" + lastLi +"</li>");
 			ulPos.find("li").eq(ulPos.find("li").length - 1).remove();
-			ulPos.css("left",0);
+			ulPos.css("left",-240);
 
 			findOn();
 		});				
+	});
+
+	$(document).mousemove(function(e){
+		var x = e.clientX * 100 / $(window).width() + "%";
+		var y = e.clientY * 100 / $(window).height() + "%";
+		
+		//console.log(x);
+		//console.log(y);
+
+		for(var i=0; i<2; i++){
+			$(".ball").eq(i).css("left","calc("+ x +" + 25%)");
+			$(".ball").eq(i).css("top",y);
+			$(".ball").eq(i).css("transform","translate(-"+x+",-"+y+")");
+		}
+		$(".ball").eq(2).css("left","calc("+ x +" - 18%)");
+		$(".ball").eq(2).css("top",y);
+		$(".ball").eq(2).css("transform","translate(-"+x+",-"+y+")");
 	});
 });
 
@@ -142,7 +167,7 @@ function findOn(){
 
 function bgMove(){
 	var moveX = (scPos - winH * 1.5) / ((winH / 2)/ 15);
-	console.log(moveX); 
+	//console.log(moveX); 
 	$('#bg_images>div:nth-of-type(1)').css({left:moveX - 5 + "%"});	
 	$('#bg_images>div:nth-of-type(2)').css({right:moveX - 5 + "%"});
 }

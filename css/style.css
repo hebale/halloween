@@ -13,7 +13,7 @@ background back image =
 
 --------------------------------------*/
 
-#btn{position:fixed; width:150px; height:40px; top:0px; left:0px; z-index: 100;}
+/*#btn{position:fixed; width:150px; height:40px; top:0px; left:0px; z-index: 100;}*/
 
 /* ------------------top_btn----------------- */
 #mouse_wheel{position:absolute; width:40px; height:110px; left:50%; margin-left:-20px; bottom:10px; overflow:hidden; opacity:0;}
@@ -101,7 +101,32 @@ background back image =
 --------------------------------------------------------------------- */
 
 .mid_section{position:relative; width:100%; height:100vh; background:#000;}
+	.ground{position:absolute; width:100vw; height:20.6vw; top:50%; transform:translate(0, -50%); opacity:0.9; background:url(../images/ground_01.png) no-repeat; background-size:100%;}
+	.ground>img{display:block; position:absolute;}
 
+		.skull{position:absolute; width:5vw; height:6.26vw; top:-6.5vw; left:15vw; background:url(../images/skull.png) no-repeat; background-size:100%;}
+		.skull>div{position:absolute; width:31.3%; height:25%; border-radius:50%; overflow:hidden;}
+		.skull>div:nth-of-type(1){top:17.5%; left:4.7%;}
+		.skull>div:nth-of-type(2){top:31.5%; right:25%;}
+			.ball{position:absolute; width:40%; height:40%; top:50%; left:50%; transform:translate(-50%, -50%); border-radius:50%; animation:eyeball 1.5s linear infinite; background-color:#f21212;}
+				@keyframes eyeball{
+					0%{box-shadow:0 0 0px 0px rgba(242,50,50,0.7); }
+					50%{box-shadow:0 0 20px 5px rgba(242,50,50,0.7); }
+					100%{box-shadow:0 0 0px 0px rgba(242,50,50,0.7); }
+				}
+		.dino_head{position:absolute; width:13.33vw; height:17.51vw; top:25vw; right:6vw; background:url(../images/dino_head.png) no-repeat; background-size:100%;}
+		.dino_head>div{position:absolute; width:17.51%; height:13.33%; top:16%; right:18%; border-radius:50%; overflow:hidden;}
+
+	.ground>img:nth-of-type(1){width:10%; top:-4vw; left:3vw;}
+	.ground>img:nth-of-type(2){width:10%; top:-2vw; left:18vw;}
+	.ground>img:nth-of-type(3){width:6%; top:1vw; right:30vw;}
+	.ground>img:nth-of-type(4){width:2.5%; top:26vw; left:12vw;}
+	.ground>img:nth-of-type(5){width:3.5vw; top:20vw; left:5vw;}
+	.ground>img:nth-of-type(6){width:3vw; top:15vw; right:5vw;}
+	.ground>img:nth-of-type(7){width:2%; top:15vw; left:4vw;}
+	.ground>img:nth-of-type(8){width:3.5%; top:10vw; left:7vw;}
+	.ground>img:nth-of-type(9){width:4%; top:1vw; right:4vw;}
+	.ground>img:nth-of-type(10){width:3.5%; top:16vw; right:25vw;}
 /* --------------------------------------------------------------------
 -----------------------------bot section css---------------------------
 --------------------------------------------------------------------- */
@@ -142,26 +167,29 @@ background back image =
 			50%{opacity:1;}
 			100%{opacity:0;}
 		}
-	div.halloween_is{display:none; width:60%; height:450px; margin:-18vh auto 0 auto;}		
-	div.halloween_is:after{content:""; display:block; clear:both;}	
-	div.halloween_is>img{display:block; float:left; width:47%; height:300px; border:1px dotted #fff;}	
-	div.halloween_is>p{float:left; width:47%; margin-left:6%; font-size:20px; line-height:35px;}	
+	div.halloween_is{_display:none; width:1200px; height:350px; margin:0 auto;}
+	div.halloween_is>p{width:900px; margin:0 auto; font-size:20px; line-height:40px; text-align:center;}	
 	
-	div.line_up{_display:none; width:60%; height:450px; margin:-18vh auto 0 auto;}
+	div.line_up{display:none; width:1000px; height:450px; margin:-100px auto 0 auto; padding-bottom:100px;}
 	div.line_up:after{content:""; display:block; clear:both;}
-	div.line_up>div:nth-of-type(1){position:relative; float:left; width:60%; height:300px; border:1px dotted #fff; _overflow:hidden;}
+	div.line_up>div:nth-of-type(1){position:relative; float:left; width:700px; height:100%; overflow:hidden;}
 	div.line_up>div:nth-of-type(1)>div{}
-	div.line_up>div:nth-of-type(1)>.btnL{}
-	div.line_up>div:nth-of-type(1)>.btnR{}
-	div.line_up>div:nth-of-type(1)>ul{position:absolute; width:1500px; height:100%; left:0;}
-	div.line_up>div:nth-of-type(1)>ul>li{float:left; width:200px; height:100%; transform-origin:50% 100%; transform:scale(0.7); transition:0.5s; cursor:pointer; border:1px dotted #00f;}
+	div.line_up>div:nth-of-type(1)>ul{position:absolute; width:1180px; height:100%; left:-240px;}
+	div.line_up>div:nth-of-type(1)>ul>li{float:left; width:220px; height:100%; transform-origin:50% 100%; transform:scale(0.6); transition:0.5s; cursor:pointer;}
 	div.line_up>div:nth-of-type(1)>ul>li.on{transform:scale(1);}
-	div.line_up>div:nth-of-type(1)>ul>li+li{margin-left:10px;}
-	div.line_up>div:nth-of-type(2){float:left; width:34%; margin-left:6%; border:1px dotted #0f0;}
-	div.line_up>div:nth-of-type(2)>div{margin-top:100px; transform:translate(0,-50%);}
+	div.line_up>div:nth-of-type(1)>ul>li.prev,
+	div.line_up>div:nth-of-type(1)>ul>li.next{opacity:0.3;}
+	div.line_up>div:nth-of-type(1)>ul>li+li{margin-left:20px;}
+
+	div.line_up>div:nth-of-type(1)>ul>li>img{display:block; margin:0 auto; height:100%;}
+
+	div.line_up>div:nth-of-type(2){float:left; width:300px; margin-top:80px;}
+	div.line_up>div:nth-of-type(2)>div{display:none; margin-top:100px; transform:translate(0,-50%);}
 	div.line_up>div:nth-of-type(2)>div>p{text-align:center;}
 	div.line_up>div:nth-of-type(2)>div>p:nth-of-type(1){font-size:36px;}
-	div.line_up>div:nth-of-type(2)>div>p:nth-of-type(2){font-size}
+	div.line_up>div:nth-of-type(2)>div>p:nth-of-type(2){_display:none;}
+
+	div.line_up>div:nth-of-type(2)>div
 
 /* --------------------------------------------------------------------
 -----------------------------미디어 쿼리 css----------------------------
